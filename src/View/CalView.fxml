@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AppointmentController">
+    <children>
+        <BorderPane fx:id="mainPane" prefHeight="600.0" prefWidth="800.0">
+            <top>
+                <Label text="Smart Calendar" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Calibri Bold" size="36.0"/>
+                    </font>
+                </Label>
+            </top>
+            <center>
+                <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE"
+                         BorderPane.alignment="CENTER">
+                    <tabs>
+                        <Tab closable="false" text="Appointment">
+                            <content>
+                                <AnchorPane xmlns="http://javafx.com/javafx/10.0.2-internal"
+                                            xmlns:fx="http://javafx.com/fxml/1">
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="360.0" layoutY="22.0"
+                                           text="Appointments" AnchorPane.leftAnchor="20.0"
+                                           AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+                                        <font>
+                                            <Font name="Calibri Bold" size="24.0"/>
+                                        </font>
+                                    </Label>
+                                    <Button fx:id="addAptBtn" layoutX="704.0" layoutY="14.0" mnemonicParsing="false"
+                                            text="New" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="155.0">
+                                        <font>
+                                            <Font name="Calibri" size="14.0"/>
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="dltAptBtn" layoutX="715.0" layoutY="520.0" mnemonicParsing="false"
+                                            text="Delete" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                        <font>
+                                            <Font name="Calibri" size="14.0"/>
+                                        </font>
+                                    </Button>
+                                    <ComboBox fx:id="calSelect" layoutX="630.0" layoutY="12.0" prefWidth="150.0"
+                                              promptText="View By" AnchorPane.rightAnchor="5.0"
+                                              AnchorPane.topAnchor="2.0"/>
+                                    <Button fx:id="viewAptBtn" layoutX="360.0" layoutY="480.0" mnemonicParsing="false"
+                                            text="Edit" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="90.0">
+                                        <font>
+                                            <Font name="Calibri" size="14.0"/>
+                                        </font>
+                                    </Button>
+                                    <TableView fx:id="aptTable" AnchorPane.bottomAnchor="50.0"
+                                               AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+                                               AnchorPane.topAnchor="30.0">
+                                        <columns>
+                                            <TableColumn fx:id="titleCol" minWidth="75.0" prefWidth="100.0"
+                                                         text="Title"/>
+                                            <TableColumn fx:id="descCol" maxWidth="200.0" minWidth="50.0"
+                                                         prefWidth="150.0" text="Description"/>
+                                            <TableColumn fx:id="typeCol" maxWidth="200.0" minWidth="50.0"
+                                                         prefWidth="120.0" text="Type"/>
+                                            <TableColumn fx:id="custCol" minWidth="100.0" prefWidth="150.0"
+                                                         text="Customer Name"/>
+                                            <TableColumn fx:id="viewCol" minWidth="50.0" prefWidth="75.0" text="Info"/>
+                                            <TableColumn fx:id="dayCol" minWidth="50.0" prefWidth="65.0" text="Day"/>
+                                            <TableColumn fx:id="startCol" maxWidth="200.0" minWidth="50.0"
+                                                         prefWidth="65.0" text="Start"/>
+                                            <TableColumn fx:id="endCol" maxWidth="200.0" minWidth="50.0"
+                                                         prefWidth="65.0" text="End"/>
+                                        </columns>
+                                    </TableView>
+
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="cstTab" closable="false" text="Customer">
+                            <fx:include source="CusView.fxml"/>
+                        </Tab>
+                        <Tab fx:id="rptTab" closable="false" text="Reports">
+                            <fx:include source="ReportView.fxml"/>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </center>
+        </BorderPane>
+
+    </children>
+</AnchorPane>

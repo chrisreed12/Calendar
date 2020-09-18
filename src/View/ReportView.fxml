@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportController">
+   <children>
+      <ComboBox fx:id="selectReport" layoutX="425.0" layoutY="23.0" prefWidth="150.0" promptText="Select Report" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+      <Label layoutX="240.0" layoutY="22.0" text="Reports" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="reportTable" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0">
+        <columns>
+          <TableColumn fx:id="firstCol" maxWidth="145.0" minWidth="75.0" prefWidth="145.0" />
+          <TableColumn fx:id="secondCol" maxWidth="145.0" minWidth="75.0" prefWidth="145.0" />
+            <TableColumn fx:id="thirdCol" maxWidth="145.0" minWidth="75.0" prefWidth="145.0" />
+            <TableColumn fx:id="fourthCol" maxWidth="145.0" minWidth="75.0" prefWidth="145.0" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddApptController">
+    <children>
+        <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="272.0" layoutY="14.0" text="Add Appointment" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="5.0">
+            <font>
+                <Font name="Calibri Bold" size="24.0" />
+            </font>
+        </Label>
+        <Text layoutX="81.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="185.0">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="93.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="55.0">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Text>
+        <TextField fx:id="title" layoutX="127.0" layoutY="47.0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="50.0" />
+        <Text layoutX="62.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="90.0">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="81.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="150.0">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="92.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="220.0">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="93.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="325.0">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="92.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Time" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="360.0">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Text>
+        <TextArea fx:id="desc" layoutX="125.0" layoutY="87.0" prefHeight="50.0" prefWidth="350.0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="85.0" />
+        <DatePicker fx:id="aptDay" layoutX="125.0" layoutY="245.0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="285.0" />
+        <TextField fx:id="loc" layoutX="127.0" layoutY="127.0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="145.0" />
+        <Button fx:id="saveBtn" layoutX="18.0" layoutY="353.0" mnemonicParsing="false" text="Save" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="100.0">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Button>
+        <Button fx:id="cnclBtn" layoutX="523.0" layoutY="353.0" mnemonicParsing="false" text="Cancel" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Button>
+        <Text fx:id="titleError" fill="RED" layoutX="291.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="285.0" AnchorPane.topAnchor="55.0" />
+        <Text fx:id="timeError" fill="RED" layoutX="342.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="325.5">
+            <font>
+                <Font name="Calibri" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="timeError2" fill="RED" layoutX="345.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="360.5">
+            <font>
+                <Font name="Calibri" size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="90.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appt Date" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="290.0">
+            <font>
+                <Font name="Calibri" size="16.0" />
+            </font>
+        </Text>
+        <Text fx:id="aptDateError" fill="RED" layoutX="317.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="290.0">
+            <font>
+                <Font name="Calibri" size="14.0" />
+            </font>
+        </Text>
+        <ComboBox fx:id="startMin" layoutX="217.0" layoutY="287.0" prefHeight="25.0" prefWidth="78.0" AnchorPane.leftAnchor="225.0" AnchorPane.topAnchor="320.0" />
+        <ComboBox fx:id="endHR" layoutX="125.0" layoutY="327.0" prefHeight="25.0" prefWidth="78.0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="355.0" />
+        <ComboBox fx:id="endMin" layoutX="217.0" layoutY="327.0" prefHeight="25.0" prefWidth="78.0" AnchorPane.leftAnchor="225.0" AnchorPane.topAnchor="355.0" />
+        <Text layoutX="201.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HR" AnchorPane.leftAnchor="207.0" AnchorPane.topAnchor="327.0">
+            <font>
+                <Font name="Calibri Bold" size="12.0" />
+            </font>
+        </Text>
+        <Text layoutX="205.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HR" AnchorPane.leftAnchor="207.0" AnchorPane.topAnchor="362.0">
+            <font>
+                <Font name="Calibri Bold" size="12.0" />
+            </font>
+        </Text>
+        <Text layoutX="309.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MIN" AnchorPane.leftAnchor="308.0" AnchorPane.topAnchor="327.0">
+            <font>
+                <Font name="Calibri Bold" size="12.0" />
+            </font>
+        </Text>
+        <Text layoutX="306.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MIN" AnchorPane.leftAnchor="308.0" AnchorPane.topAnchor="362.0">
+            <font>
+                <Font name="Calibri Bold" size="12.0" />
+            </font>
+        </Text>
+        <ComboBox fx:id="startHR" layoutX="125.0" layoutY="289.0" prefHeight="25.0" prefWidth="78.0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="320.0" />
+        <ComboBox fx:id="custSelect" layoutX="125.0" layoutY="167.0" prefWidth="150.0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="180.0" />
+        <ComboBox fx:id="typeSelect" layoutX="125.0" layoutY="205.0" prefWidth="150.0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="215.0" />
+        <Text fx:id="descError" fill="RED" layoutX="488.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="485.0" AnchorPane.topAnchor="100.0" />
+        <Text fx:id="locError" fill="RED" layoutX="290.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="285.0" AnchorPane.topAnchor="150.0" />
+        <Text layoutX="90.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="URL" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="255.0">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font></Text>
+        <TextField fx:id="url" layoutX="125.0" layoutY="248.0" prefWidth="350.0" AnchorPane.topAnchor="250.0" />
+        <Text fx:id="custError" fill="RED" layoutX="292.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="285.0" AnchorPane.topAnchor="185.0" />
+        <Text fx:id="typeError" fill="RED" layoutX="288.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="285.0" AnchorPane.topAnchor="220.0" />
+    </children>
+</AnchorPane>

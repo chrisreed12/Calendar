@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerController">
+    <children>
+        <Label alignment="CENTER" layoutX="264.0" layoutY="14.0" text="Customers" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Calibri Bold" size="24.0" />
+            </font>
+        </Label>
+        <TableView fx:id="customerTable" layoutX="14.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+            <columns>
+                <TableColumn fx:id="customerCol" minWidth="75.0" prefWidth="100.0" text="Customer" />
+                <TableColumn fx:id="phoneCol" minWidth="75.0" prefWidth="100.0" text="Phone" />
+                <TableColumn fx:id="addressCol" minWidth="75.0" prefWidth="150.0" text="Address" />
+            <TableColumn fx:id="address2Col" minWidth="75.0" prefWidth="150.0" text="Address2" />
+                <TableColumn fx:id="cityCol" prefWidth="75.0" text="City" />
+                <TableColumn fx:id="countryCol" prefWidth="75.0" text="Country" />
+                <TableColumn fx:id="postalCol" prefWidth="75.0" text="Postal Code" />
+            </columns>
+        </TableView>
+        <Button fx:id="newBtn" mnemonicParsing="false" text="New" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="155.0">
+            <font>
+                <Font name="Calibri" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="editBtn" mnemonicParsing="false" text="Edit" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="90.0">
+            <font>
+                <Font name="Calibri" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="dltBtn" mnemonicParsing="false" text="Delete" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <font>
+                <Font name="Calibri" size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
